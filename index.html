@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator ggtest</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">QR Code Generator</h1>
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <form id="qr-form">
+                    <div class="form-group">
+                        <label for="input-text">Text to encode:</label>
+                        <input class="form-control" id="input-text" placeholder="Enter text" type="number" maxlength="8">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="input-size">QR Code size (pixels):</label>
+                        <input type="number" class="form-control" id="input-size" value="100">
+                    </div>
+                    <!-- Add a new input field for the student's name -->
+                    <div class="form-group">
+                        <label for="input-student-name">Student Name:</label>
+                        <input type="text" class="form-control" id="input-student-name"
+                            placeholder="Enter student name">
+                    </div>
+                    <!-- Add a new input field for the address -->
+                    <div class="form-group">
+                        <label for="input-address">Address:</label>
+                        <input type="text" class="form-control" id="input-address" placeholder="Enter address">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-email">Email:</label>
+                        <input type="email" class="form-control" id="input-email" placeholder="Enter email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="input-password">Password:</label>
+                        <input type="password" class="form-control" id="input-password" placeholder="Enter password">
+                    </div>
+                    
+
+
+                    <button type="submit" class="btn btn-primary">Generate QR Code</button>
+                </form>
+                <div class="text-center mt-3">
+                    <img id="qr-code" src="" alt="QR Code" title="QR Code" style="display:none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS, jQuery, and Axios -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../PokemonUI"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "KnockKnock"
+	}
+}
