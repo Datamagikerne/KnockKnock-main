@@ -12,43 +12,41 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center mt-5">QR Code Generator</h1>
+        <div class="text-center mt-5">
+            <h1 class="title-border rounded-input"> <b>QR Code Generator</b></h1>
+          </div>
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
                 <form id="qr-form">
-                    <div class="form-group">
-                        <label for="input-text">Text to encode:</label>
-                        <input class="form-control" id="input-text" placeholder="Enter text" type="number" maxlength="8">
-
+                    <div class="form-group rounded-input" style="background-color:#19c7d2";>
+                        <label for="input-text"> <b style="color: rgb(0, 0, 0);">&nbsp;Text to encode:</b> </label>
+                        <input class="form-control rounded-input" id="input-text" placeholder="Enter text" type="number" maxlength="8">
                     </div>
-                    <div class="form-group">
-                        <label for="input-size">QR Code size (pixels):</label>
-                        <input type="number" class="form-control" id="input-size" value="100">
+                    <div class="form-group rounded-input" style="background-color:#19c7d2";>
+                        <label for="input-size"> <b style="color: rgb(0, 0, 0);">&nbsp;QR Code size 5(pixels):</b></label>
+                        <input type="number" class="form-control rounded-input" id="input-size" value="100">
                     </div>
-                    <!-- Add a new input field for the student's name -->
-                    <div class="form-group">
-                        <label for="input-student-name">Student Name:</label>
-                        <input type="text" class="form-control" id="input-student-name"
+                    <div class="form-group rounded-input" style="background-color: #19c7d2";>
+                        <label for="input-student-name"><b style="color: rgb(0, 0, 0);">&nbsp;Student Name:</b></label>
+                        <input type="text" class="form-control rounded-input" id="input-student-name"
                             placeholder="Enter student name">
                     </div>
                     <!-- Add a new input field for the address -->
-                    <div class="form-group">
-                        <label for="input-address">Address:</label>
-                        <input type="text" class="form-control" id="input-address" placeholder="Enter address">
+                    <div class="form-group rounded-input" style="background-color: #19c7d2";>
+                        <label for="input-address"><b style="color: rgb(0, 0, 0);">&nbsp;Address:</b></label>
+                        <input type="text" class="form-control rounded-input" id="input-address" placeholder="Enter address">
                     </div>
-                    <div class="form-group">
-                        <label for="input-email">Email:</label>
+                    <div class="form-group rounded-input" style="background-color: #19c7d2";>
+                        <label for="input-email"><b style="color: rgb(0, 0, 0);">&nbsp;Email:</b></label>
                         <input type="email" class="form-control" id="input-email" placeholder="Enter email">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="input-password">Password:</label>
-                        <input type="password" class="form-control" id="input-password" placeholder="Enter password">
+                    <div class="form-group rounded-input" style="background-color: #19c7d2";>
+                        <label for="input-password"><b style="color: rgb(0, 0, 0);">&nbsp;Password:</b></label>
+                        <input type="password" class="form-control rounded-input" id="input-password" placeholder="Enter password">
                     </div>
-                    
 
-
-                    <button type="submit" class="btn btn-primary">Generate QR Code</button>
+                    <button style="background-color: #0396b5;" type="submit" class="btn btn-primary">Generate QR Code</button>
                 </form>
                 <div class="text-center mt-3">
                     <img id="qr-code" src="" alt="QR Code" title="QR Code" style="display:none;">
