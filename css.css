@@ -5,13 +5,12 @@ body {
   background-size: cover;
 }
 
-.title-border {
+  .title-border {
   border: 2px solid #000;
   background-color: #fff;
   padding: 10px;
   display: inline-block;
-  
-}
+  }
 
   h1 {
     text-align: center;
@@ -88,5 +87,23 @@ body {
     margin-bottom: 10px;
   }
   
+  .getAllButton {
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    padding: 5px 5px;
+    font-weight: bold;
+    background-color: #ffffff;
+  }
 
+  .table {
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid black;
+}
+
+  .table th {
+    background-color:#19c7d2;
+  }
   
