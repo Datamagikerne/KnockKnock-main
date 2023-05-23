@@ -8,7 +8,7 @@ new Vue({
     },
     methods: {
       submitForm() {
-        axios.get(`http://localhost:5093/api/students/email=${this.email}&password=${this.password}`)
+        axios.get(`https://knockknockrestapi.azurewebsites.net/api/students/email=${this.email}&password=${this.password}`)
           .then(response => {
             this.currentStudent = response.data;
             console.log('Data received:', response.data);

@@ -1,4 +1,4 @@
-const baseUrl2 = "http://localhost:5093/api/departures"
+const baseUrl2 = "https://knockknockrestapi.azurewebsites.net/api/departures"
 
 const vueDepartures = Vue.createApp({
     data() {
