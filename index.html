@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Code Generator</title>
   <!-- Add Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
 </head>
 
 
@@ -38,37 +38,37 @@
         <div class="row mt-5">
           <div class="col-md-6 offset-md-3">
             <form id="qr-form">
-              <div class="form-group rounded-input" style="background-color: #19c7d2" ;>
+              <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-text">
                   <b style="color: rgb(0, 0, 0)">&nbsp;Text to encode:</b>
                 </label>
                 <input class="form-control rounded-input" id="input-text" placeholder="Enter text" type="number"
-                  maxlength="8" />
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, 8);">
               </div>
-              <div class="form-group rounded-input" style="background-color: #19c7d2" ;>
+              <div class="form-group rounded-input" style="background-color: #19c7d2" >
                 <label for="input-size">
                   <b style="color: rgb(0, 0, 0)">&nbsp;QR Code size 5(pixels):</b></label>
-                <input type="number" class="form-control rounded-input" id="input-size" value="100" />
+                <input type="number" class="form-control rounded-input" id="input-size" value="100">
               </div>
-              <div class="form-group rounded-input" style="background-color: #19c7d2" ;>
+              <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-student-name"><b style="color: rgb(0, 0, 0)">&nbsp;Student Name:</b></label>
                 <input type="text" class="form-control rounded-input" id="input-student-name"
-                  placeholder="Enter student name" />
+                  placeholder="Enter student name">
               </div>
               <!-- Add a new input field for the address -->
-              <div class="form-group rounded-input" style="background-color: #19c7d2" ;>
+              <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-address"><b style="color: rgb(0, 0, 0)">&nbsp;Address:</b></label>
-                <input type="text" class="form-control rounded-input" id="input-address" placeholder="Enter address" />
+                <input type="text" class="form-control rounded-input" id="input-address" placeholder="Enter address">
               </div>
-              <div class="form-group rounded-input" style="background-color: #19c7d2" ;>
+              <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-email"><b style="color: rgb(0, 0, 0)">&nbsp;Email:</b></label>
-                <input type="email" class="form-control" id="input-email" placeholder="Enter email" />
+                <input type="email" class="form-control" id="input-email" placeholder="Enter email">
               </div>
 
-              <div class="form-group rounded-input" style="background-color: #19c7d2" ;>
+              <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-password"><b style="color: rgb(0, 0, 0)">&nbsp;Password:</b></label>
                 <input type="password" class="form-control rounded-input" id="input-password"
-                  placeholder="Enter password" />
+                  placeholder="Enter password">
               </div>
 
               <button style="background-color: #0396b5" type="submit" class="btn btn-primary">
@@ -76,8 +76,9 @@
               </button>
             </form>
             <div class="text-center mt-3">
-              <img id="qr-code" src="" alt="QR Code" title="QR Code" style="display: none" />
+              <img id="qr-code" src="this.imageUrl" alt="QR Code" title="QR Code" style="display: none">
             </div>
+            <br>
           </div>
         </div>
       </div>

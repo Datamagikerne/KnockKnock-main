@@ -19,7 +19,7 @@ document.getElementById('qr-form').addEventListener('submit', async function(eve
             qrCodeImg.style.display = 'inline';
 
             // Send the student name, email, password, and QR code data to the REST API
-            const restApiUrl = 'https://knockknockrestw.azurewebsites.net/api/students';
+            const restApiUrl = 'http://localhost:5093/api/students';
             const studentData = {
                 name: inputStudentName,
                 address: inputAddress,
@@ -40,3 +40,5 @@ document.getElementById('qr-form').addEventListener('submit', async function(eve
         alert('Please fill in all fields.');
     }
 });
+//var QRInput = document.getElementById("input-text").maxLength = 8;
+
