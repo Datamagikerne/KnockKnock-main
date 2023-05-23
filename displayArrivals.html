@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
   <link rel="stylesheet" href="css.css">
   <title>Arrival List</title>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-sm">
-    <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item headers">
         <a class="nav-link">Knock Knock</a>
@@ -28,35 +29,38 @@
       </li>
     </ul>
   </nav>
-  <div class="container">
-    <div class="text-center mt-5">
-      <h1 class="title-border rounded-input"><b>All check-ins</b></h1>
-    </div>
-    <div id="app">
-      <button id="getAllButton" v-on:click="getAllArrivals" class="getAllButton">See arrivals</button>
-      <br />
-      <table id="arrivalslist" class="table" v-if="arrivals.length">
-        <thead>
-            <th>ID</th>
-            <th>QR</th>
-            <th>Time</th>
-            <th>Name</th>
-        </thead>
-        <tbody>
-            <tr id="arrivalsStudent" v-for="arrival in arrivals">
-                <td>{{arrival.id}}</td>
-                <td>{{arrival.qrCode}}</td>
-                <td>{{arrival.arrivalTime}}</td>
-                <td>{{arrival.name}}</td>
+  <div class="baggrund">
+    <div class="container">
+      <div class="text-center mt-5">
+        <h1 class="title-border rounded-input"><b>All check-ins</b></h1>
+      </div>
+      <div id="app">
+        <button id="getAllButton" v-on:click="getAllArrivals" class="getAllButton">See arrivals</button>
+        <br>
+        <table id="arrivalslist" class="table" v-if="arrivals.length">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>QR</th>
+              <th>Time</th>
+              <th>Name</th>
             </tr>
-        </tbody>
-      <div v-else>
-        <h1 id="noStudentMessage" v-if="noStudents">No Students</h1>
+          </thead>
+          <tbody>
+            <tr id="arrivalsStudent" v-for="arrival in arrivals">
+              <td>{{arrival.id}}</td>
+              <td>{{arrival.qrCode}}</td>
+              <td>{{arrival.arrivalTime}}</td>
+              <td>{{arrival.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div v-else>
+          <h1 id="noStudentMessage" v-if="noStudents">No Students</h1>
+        </div>
       </div>
     </div>
   </div>
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
   <script src="js/displayArrivals.js"></script>
   <script src="js/displayDepartures.js"></script>
 </body>
