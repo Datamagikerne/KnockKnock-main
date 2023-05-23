@@ -29,29 +29,62 @@
     </ul>
   </nav>
   <div class="container">
-    <div class="text-center mt-5">
-      <h1 class="title-border rounded-input"><b>All check-ins</b></h1>
-    </div>
-    <div id="app">
-      <button id="getAllButton" v-on:click="getAllArrivals" class="getAllButton">See arrivals</button>
-      <br />
-      <table id="arrivalslist" class="table" v-if="arrivals.length">
-        <thead>
-            <th>ID</th>
-            <th>QR</th>
-            <th>Time</th>
-            <th>Name</th>
-        </thead>
-        <tbody>
-            <tr id="arrivalsStudent" v-for="arrival in arrivals">
-                <td>{{arrival.id}}</td>
-                <td>{{arrival.qrCode}}</td>
-                <td>{{arrival.arrivalTime}}</td>
-                <td>{{arrival.name}}</td>
-            </tr>
-        </tbody>
-      <div v-else>
-        <h1 id="noStudentMessage" v-if="noStudents">No Students</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text-center mt-5">
+          <h1 class="title-border rounded-input"><b>All check-ins</b></h1>
+        </div>
+        <div id="vueArrivals">
+          <button id="getAllButton" v-on:click="getAllArrivals" class="getAllButton">See arrivals</button>
+          <br />
+          <table id="arrivalslist" class="table" v-if="arrivals.length">
+            <thead>
+                <th>ID</th>
+                <th>QR</th>
+                <th>Time</th>
+                <th>Name</th>
+            </thead>
+            <tbody>
+                <tr id="arrivalsStudent" v-for="arrival in arrivals">
+                    <td>{{arrival.id}}</td>
+                    <td>{{arrival.qrCode}}</td>
+                    <td>{{formatTime(arrival.arrivalTime)}}</td>
+                    <td>{{arrival.name}}</td>
+                </tr>
+            </tbody>
+          </table>
+          <div v-else>
+            <h1 id="noStudentMessage" v-if="noStudents">No Students</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center mt-5">
+          <h1 class="title-border rounded-input"><b>All check-outs</b></h1>
+        </div>
+        <div id="vueDepartures">
+          <button id="getAllDeparturesButton" v-on:click="getAllDepartures" class="getAllButton">See departures</button>
+          <br />
+          <table id="departureslist" class="table" v-if="departures.length">
+            <thead>
+                <th>ID</th>
+                <th>QR</th>
+                <th>Time</th>
+                <th>Name</th>
+            </thead>
+            <tbody>
+                <tr id="departuresStudent" v-for="departure in departures">
+                    <td>{{departure.id}}</td>
+                    <td>{{departure.qrCode}}</td>
+                    <td>{{formatTime(departure.departureTime)}}</td>
+                    <td>{{departure.name}}</td>
+                </tr>
+            </tbody>
+          </table>
+          <div v-else>
+            <h1 id="noStudentMessage" v-if="noStudents">No Students</h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>
