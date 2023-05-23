@@ -40,3 +40,5 @@ document.getElementById('qr-form').addEventListener('submit', async function(eve
         alert('Please fill in all fields.');
     }
 });
+//var QRInput = document.getElementById("input-text").maxLength = 8;
+
