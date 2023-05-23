@@ -30,4 +30,8 @@ const vueDepartures = Vue.createApp({
     // created() {
     //     this.getAllDepartures();
     // }
-}).mount("#vueDepartures");
+}).mount("#vueDepartures")
+
+// setInterval(() => {
+//     vueDepartures.getAllDepartures();
+//   }, 1000);
