@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Code Generator</title>
-  <!-- Add Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css.css">
 </head>
 
-
 <body>
   <nav class="navbar navbar-expand-sm">
-    <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item headers">
         <a class="nav-link">Knock Knock</a>
@@ -44,9 +40,9 @@
                   <b style="color: rgb(0, 0, 0)">&nbsp;Text to encode:</b>
                 </label>
                 <input class="form-control rounded-input" id="input-text" placeholder="Enter text" type="number"
-                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, 8);">
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, 8);">
               </div>
-              <div class="form-group rounded-input" style="background-color: #19c7d2" >
+              <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-size">
                   <b style="color: rgb(0, 0, 0)">&nbsp;QR Code size 5(pixels):</b></label>
                 <input type="number" class="form-control rounded-input" id="input-size" value="100">
@@ -56,7 +52,6 @@
                 <input type="text" class="form-control rounded-input" id="input-student-name"
                   placeholder="Enter student name">
               </div>
-              <!-- Add a new input field for the address -->
               <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-address"><b style="color: rgb(0, 0, 0)">&nbsp;Address:</b></label>
                 <input type="text" class="form-control rounded-input" id="input-address" placeholder="Enter address">
@@ -65,13 +60,11 @@
                 <label for="input-email"><b style="color: rgb(0, 0, 0)">&nbsp;Email:</b></label>
                 <input type="email" class="form-control" id="input-email" placeholder="Enter email">
               </div>
-
               <div class="form-group rounded-input" style="background-color: #19c7d2">
                 <label for="input-password"><b style="color: rgb(0, 0, 0)">&nbsp;Password:</b></label>
                 <input type="password" class="form-control rounded-input" id="input-password"
                   placeholder="Enter password">
               </div>
-
               <button style="background-color: #0396b5" type="submit" class="btn btn-primary">
                 Generate QR Code
               </button>
@@ -86,7 +79,6 @@
     </div>
   </div>
 
-  <!-- Add Bootstrap JS, jQuery, and Axios -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

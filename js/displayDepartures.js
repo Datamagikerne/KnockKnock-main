@@ -24,14 +24,6 @@ const vueDepartures = Vue.createApp({
             let hours = (date.getHours() < 10 ? '0' : '') + date.getHours();
             let minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
             return `${day}/${month} ${hours}:${minutes}`;
-          }
-          
+        }
     },
-    // created() {
-    //     this.getAllDepartures();
-    // }
 }).mount("#vueDepartures")
-
-// setInterval(() => {
-//     vueDepartures.getAllDepartures();
-//   }, 1000);

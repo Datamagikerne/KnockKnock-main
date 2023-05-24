@@ -1,4 +1,4 @@
-document.getElementById('qr-form').addEventListener('submit', async function(event) {
+document.getElementById('qr-form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const inputStudentName = document.getElementById('input-student-name').value;
@@ -11,14 +11,12 @@ document.getElementById('qr-form').addEventListener('submit', async function(eve
 
     if (inputStudentName && inputText && inputSize && inputAddress && inputEmail && inputPassword) {
         const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${inputText}&size=${inputSize}x${inputSize}`;
-
         try {
             const response = await axios.get(apiUrl, { responseType: 'blob' });
             const imageUrl = URL.createObjectURL(response.data);
             qrCodeImg.src = imageUrl;
             qrCodeImg.style.display = 'inline';
 
-            // Send the student name, email, password, and QR code data to the REST API
             const restApiUrl = 'https://knockknockrestapi.azurewebsites.net/api/students';
             const studentData = {
                 name: inputStudentName,
@@ -30,7 +28,6 @@ document.getElementById('qr-form').addEventListener('submit', async function(eve
             };
             console.log(studentData);
             await axios.post(restApiUrl, studentData);
-
         } catch (error) {
             console.error('Error generating QR code or sending data to REST API:', error);
             const errorMessage = error.response ? error.response.data : error.message;
@@ -40,5 +37,3 @@ document.getElementById('qr-form').addEventListener('submit', async function(eve
         alert('Please fill in all fields.');
     }
 });
-//var QRInput = document.getElementById("input-text").maxLength = 8;
-
